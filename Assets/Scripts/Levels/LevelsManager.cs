@@ -23,6 +23,7 @@ public class LevelsManager
 #endif
     public LevelsManager()
     {
+        Debug.Log(DataPath);
         Levels = new List<string>();
         LoadLevelsName();
     }
