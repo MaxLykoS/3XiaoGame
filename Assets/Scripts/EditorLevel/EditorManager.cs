@@ -59,8 +59,8 @@ public class EditorManager : MonoBehaviour {
                 grid.transform.localPosition = new Vector3(i * 55, j*55, 0);
             }
         }
-        GameObject[] UIElements = GameObject.FindGameObjectsWithTag("UIElement");
-        foreach (GameObject go in UIElements) go.AddComponent<UIDragHandler>();
+        /*GameObject[] UIElements = GameObject.FindGameObjectsWithTag("UIElement");
+        foreach (GameObject go in UIElements) go.AddComponent<UIDragHandler>();*/
         newLevel.SetPropsCount(Convert.ToInt32(TipsProps.options[TipsProps.value].text),
             Convert.ToInt32(ResetProps.options[ResetProps.value].text));
 

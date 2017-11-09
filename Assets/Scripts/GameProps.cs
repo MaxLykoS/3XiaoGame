@@ -24,7 +24,7 @@ public class GameProps : MonoBehaviour {
         ResetMapCountText = GameObject.Find("Canvas/GameProps/ResetMap/PropCount").GetComponent<Text>();
         ResetMapCountText.text = ResetMapCount.ToString();
 
-        gameUI = GameObject.Find("Canvas/PlayGame/GridController").transform;
+        gameUI = GameObject.Find("Canvas/PlayGame/BG1/GridController").transform;
         pauseUI = GameObject.Find("Canvas/PauseMenu").transform;
         pauseUI.gameObject.SetActive(false);
     }

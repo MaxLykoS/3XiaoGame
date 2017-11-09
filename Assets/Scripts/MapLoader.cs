@@ -31,11 +31,6 @@ public class MapLoader : MonoBehaviour
             string json = sr.ReadToEnd();
             LevelDic[levelName] = JsonUtility.FromJson<Level>(json);
         }
-        /*TextAsset[] levelTextArray = Resources.LoadAll<TextAsset>("Levels");
-        foreach (TextAsset lta in levelTextArray)
-        {
-            LevelDic[lta.name] = JsonUtility.FromJson<Level>(lta.text);
-        }*/
     }
     public void ReloadAllLevel()
     {
@@ -90,7 +85,7 @@ public class MapLoader : MonoBehaviour
             GridController.Instance.DicGrid[mapPosList[i]].ChangeTypeTo(mapTypeList[i]);
         }
 
-        GameObject[] UIsGo = GameObject.FindGameObjectsWithTag("UIElement");
+        /*GameObject[] UIsGo = GameObject.FindGameObjectsWithTag("UIElement");
         List<Vector2> UIsPos=level.UIsPos;
         List<Vector2> UIsWH=level.UIsWH;
         for(int i=0;i<UIsPos.Count;i++)
@@ -98,7 +93,7 @@ public class MapLoader : MonoBehaviour
             RectTransform rt = UIsGo[i].GetComponent<RectTransform>();
             rt.localPosition = UIsPos[i];
             rt.sizeDelta = UIsWH[i];
-        }
+        }*/
         gameProps = GameObject.Find("Tools/GamePropManager").GetComponent<GameProps>();
         gameProps.ShowTioPropCount = level.PropsGetTip;
         gameProps.ResetMapCount = level.PropsMapReset;

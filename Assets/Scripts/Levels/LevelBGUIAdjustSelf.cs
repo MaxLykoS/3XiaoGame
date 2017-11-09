@@ -11,7 +11,7 @@ public class LevelBGUIAdjustSelf : MonoBehaviour, IUIAdjustSelf {
     public RectTransform spawnpoint;
     public void GetTargetTransform()
     {
-        size = new Vector2(GridController.Instance.xl, GridController.Instance.yl);
+        size = new Vector2(GridController.Instance.xl*60, GridController.Instance.yl*60);
         Self = GameObject.Find("Canvas/PlayGame/BG1").GetComponent<RectTransform>();
         
     }
@@ -20,18 +20,16 @@ public class LevelBGUIAdjustSelf : MonoBehaviour, IUIAdjustSelf {
     {
         Self.sizeDelta = size;
         Debug.Log(Self.sizeDelta);
-        Debug.Log(Self.transform.name);
+        Debug.Log(Self.name);
         //spawnpoint.localPosition = new Vector2(Self.position.x - Self.sizeDelta.x / 2 + 70, Self.position.y - Self.sizeDelta.y / 2 + 50);
     }
 
-    // Use this for initialization
     void Start ()
     {
         GetTargetTransform();
         SynSelfTransform();
     }
 	
-	// Update is called once per frame
 	void Update () {
 	
 	}
