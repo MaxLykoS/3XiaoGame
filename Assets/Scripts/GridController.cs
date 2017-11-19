@@ -90,14 +90,20 @@ public class GridController : MonoBehaviour //,INotifier
 
         if (PlayKey)
         {
-            mTime -= Time.deltaTime;
+            mTime -= Time.deltaTime* factor;
             if (mTime < 0)
             {
+                totalSeconds++;
                 mTime = 1;
                 GameTime -= 1;
                 TimeText.text = GameTime.ToString();
                 timeCounter.UpdateCombo();
                 TimeBar.size = GameTime / GameTimeAll;
+            }
+            if (totalSeconds==60 )
+            {
+                factor+=0.1f;
+                totalSeconds = 0;
             }
 
             if (GameTime == 0)
@@ -229,6 +235,10 @@ public class GridController : MonoBehaviour //,INotifier
     private Scrollbar TimeBar = null;
     private float mTime = 1f;
     private float GameTime;
+
+    private float totalSeconds = 0;
+    private float factor=1;
+
     public float GameTimeAll=15;
     public float timeIncrement;
     [HideInInspector]public bool PlayKey = false;
@@ -560,7 +570,7 @@ public class GridController : MonoBehaviour //,INotifier
                 else if (NullGridPos != -1&& findWall == false)
                 {
                     Vector2 pos = DicGrid[GetGridID(x, y)].transform.localPosition;
-                    pos.y = NullGridPos * 55;
+                    pos.y = NullGridPos * 100;
                     DicGrid[GetGridID(x, y)].TragetPos = pos;
                     if (!IsMove.Contains(GetGridID(x, NullGridPos)))
                     {

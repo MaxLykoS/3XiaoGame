@@ -56,7 +56,7 @@ public class EditorManager : MonoBehaviour {
                 editorGrid.GridID = i * 10 + j;
                 grid.transform.SetParent(GridSpawnPoint.transform,false);
                 grid.GetComponent<Image>().color = Color.white;
-                grid.transform.localPosition = new Vector3(i * 55, j*55, 0);
+                grid.transform.localPosition = new Vector3(i * 100, j*100, 0);
             }
         }
         /*GameObject[] UIElements = GameObject.FindGameObjectsWithTag("UIElement");

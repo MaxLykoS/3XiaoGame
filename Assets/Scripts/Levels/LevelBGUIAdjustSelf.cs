@@ -11,7 +11,7 @@ public class LevelBGUIAdjustSelf : MonoBehaviour, IUIAdjustSelf {
     public RectTransform spawnpoint;
     public void GetTargetTransform()
     {
-        size = new Vector2(GridController.Instance.xl*60, GridController.Instance.yl*60);
+        size = new Vector2(GridController.Instance.xl* 103f, GridController.Instance.yl*103f);
         Self = GameObject.Find("Canvas/PlayGame/BG1").GetComponent<RectTransform>();
         
     }

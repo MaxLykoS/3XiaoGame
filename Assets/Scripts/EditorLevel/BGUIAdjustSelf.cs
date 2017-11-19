@@ -24,7 +24,7 @@ public class BGUIAdjustSelf : MonoBehaviour,IUIAdjustSelf {
     {
         while (true)
         {
-            Self.sizeDelta = new Vector2(EditorManager.Instance.xl * 65,EditorManager.Instance.yl*65);
+            Self.sizeDelta = new Vector2(EditorManager.Instance.xl * 103,EditorManager.Instance.yl*103);
             yield return new WaitForSeconds(0.2f);
         }
     }

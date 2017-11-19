@@ -61,7 +61,9 @@ public class MapLoader : MonoBehaviour
 
         if (!Global.instance.SoundManager.isPlayingBGM)
         {
-            Global.instance.SoundManager.PlayBGM(level.BGMname);
+            int order = (int)Random.Range(1f, 4f);
+            string BGMName = "GamePlay0" + order.ToString();
+            Global.instance.SoundManager.PlayBGM(BGMName);
         }
 
         GridController.Instance.InitXandY(x, y);

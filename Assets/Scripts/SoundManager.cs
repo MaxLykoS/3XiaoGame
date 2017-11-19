@@ -24,8 +24,8 @@ public class SoundManager : MonoBehaviour
         {
             soundDictionary.Add(ac.name, ac);
         }
-        bgmAS.volume = PlayerPrefs.GetFloat("BGMVol");
-        audioVol = PlayerPrefs.GetFloat("audioVol");
+        bgmAS.volume = PlayerPrefs.GetFloat("BGMVol",1f);
+        audioVol = PlayerPrefs.GetFloat("audioVol",1f);
     }
     public void PlayBGM(string name)
     {

@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class GridUnit : MonoBehaviour, IPointerClickHandler
 {
     public int GridId;
-    private int GridSize = 55;
+    private int GridSize = 100;
     private int Gridx;
     private int Gridy;
     public int GridType = 0;
