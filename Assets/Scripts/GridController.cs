@@ -102,7 +102,7 @@ public class GridController : MonoBehaviour //,INotifier
             }
             if (totalSeconds==60 )
             {
-                factor+=0.1f;
+                factor+=0.5f;
                 totalSeconds = 0;
             }
 
